@@ -29,7 +29,6 @@ int main(int argc, char const *argv[]){
 	my_heapinfo();
 	print_free_list();
 
-	printf("---------------------------------\n");
 	char* c1 = my_alloc(24);
 	my_heapinfo();
 	print_free_list();
@@ -70,7 +69,6 @@ int main(int argc, char const *argv[]){
 	my_heapinfo();
 	print_free_list();
 
-	printf("here behenchoddddd\n");
 	char* z1 = my_alloc(3840-8);
 	my_heapinfo();
 	print_free_list();
