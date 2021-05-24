@@ -1,0 +1,48 @@
+Testcases:
+
+[in home directory]
+cd ..
+cd ~
+cd ../1/../../Assn/../../Sem7																[should give does not exist]
+cd ../1/../../Assn/../../../Sem7
+cd ../../../../../../../../../../../../../../../../../      [should take to topmost folder]
+[in home directory]
+cd ~
+cd ../../..
+cd ~/temp
+cd ~/temp/../../../
+cd ~/../
+cd ~.../																										[should fail]
+[in mtl458 directory]
+cd pintos
+cd ..
+cd Assn/1/
+cd ../..
+cd Assn/1/../1
+[in home directory]
+cd "new folder"
+cd ..
+cd "new " folder"																						[should fail]
+cd "new" folder																							[should fail]
+cd new folder																								[should fail]
+cd "new fol der"
+cd ..
+cd ~/"new folder"
+[in any directory]
+cd /
+cd ..
+cd ../////// 													[should be equivalent to cd ..]
+cd /////// 														[should be equivalent to cd /]
+(** TODO** cd home after above command gives "incorrect" path -- fix that)
+cd /home/ankit/Desktop
+cd /home/ankit/Desktop/..
+cd /home/ankit/../../../../						[should take to topmost folder]
+[in any directory]
+** TODO **
+history
+history 1
+history 5
+history 6
+history 1 1
+history sandksl
+history even takes empty command :(
